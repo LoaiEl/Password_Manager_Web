@@ -1,7 +1,38 @@
 *{
     font-family: 'Poppins', sans-serif;
+
+    /* WEB COLOR SCHEMA*/
+    --BGblack: #050505;
+    --ShadeBlack: #141414;
+    --HoverBlack: #2F2F2F;
+
+    --White: #FFFFFF;
+
+    --RareRed: #F33A3A;
+
+    /* FONT SIZING*/
+    --Title: 3em;
+    --SubTitle: 1.5em;
+
+    --Paragraph: 1em;
+
+
 }
 h1{
     font-size: 4em ;
     color: black;
+}
+body{
+    background-color: var(--BGblack);
+    color: var(--BGblack);
+    margin: 0em;
+}
+.title{
+    font-size: var(--Title);
+    color: var(--White);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1em;
+    margin: 0px;
+    padding: 0px;
 }
