@@ -1,6 +1,8 @@
 *{
     font-family: 'Poppins', sans-serif;
-
+    color: white;
+    scroll-behavior: smooth;
+    
     /* WEB COLOR SCHEMA*/
     --BGblack: #050505;
     --ShadeBlack: #141414;
@@ -15,17 +17,66 @@
     --SubTitle: 1.5em;
 
     --Paragraph: 1em;
-
-
 }
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-color: var(--ShadeBlack);
+}
+section{
+    height: 100vh;
+}
+.nav__links {
+    list-style: none;
+    cursor: pointer;
+    
+}
+.nav__links > li{
+    display: inline-block;
+    padding-inline: 1em; 
+}
+.nav__links > li > a{
+    text-decoration: none;
+    transition: 0.2s;
+}
+.nav__links > li > a:hover{
+    color: var(--RareRed);
+}
+
 h1{
     font-size: 4em ;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 body{
     background-color: var(--BGblack);
     color: var(--BGblack);
     margin: 0em;
+}
+/*
+[name of line]
+
+*/
+.content-grid{
+    display: grid;
+    grid-template-columns: 
+        [full-start]100px [breakout-start] 100px [content-start] 
+        1fr [content-end] 100px [breakout-end] 100px[full-end];
+}
+
+.content-grid > *{
+    grid-column: content;
+}
+.content-grid > .breakout{
+    grid-column: breakout;
+}
+.padding-1{
+    margin-top: 5em;
+}
+
+.content-grid > .fullgrid{
+    grid-column: full;
 }
 .title{
     font-size: var(--Title);
@@ -33,6 +84,30 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: 1em;
-    margin: 0px;
     padding: 0px;
+}
+
+.center-text{
+    text-align: center;
+}
+
+
+
+
+
+
+/*SCROLL BAR BOILER CODE*/
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--ShadeBlack); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--RareRed); 
 }
